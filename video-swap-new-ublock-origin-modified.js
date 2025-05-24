@@ -2,7 +2,7 @@ twitch-videoad.js text/javascript
 (function() {
     if ( /(^|\.)twitch\.tv$/.test(document.location.hostname) === false ) { return; }
     // Liste des chaînes où le script ne doit pas s'activer
-    var blockedChannels = ['kuru_zink', '1poupoulidor_'];
+    var blockedChannels = ['kuru_zink', 'locklear'];
 
     // Récupère le nom de la chaîne à partir de l'URL
     var pathParts = window.location.pathname.split('/');
