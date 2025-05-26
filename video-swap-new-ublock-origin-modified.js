@@ -1,19 +1,7 @@
 twitch-videoad.js text/javascript
 (function() {
-    if ( /(^|\.)twitch\.tv$/.test(document.location.hostname) === false ) { return; }
-    // Liste des chaînes où le script ne doit pas s'activer
-    var blockedChannels = ['kuru_zink', 'locklear'];
-
-    // Récupère le nom de la chaîne à partir de l'URL
-    var pathParts = window.location.pathname.split('/');
-    var channelName = pathParts.length > 1 ? pathParts[1].toLowerCase() : '';
-
-    // Si la chaîne est dans la liste, on quitte
-    if (blockedChannels.includes(channelName)) {
-        console.log("Script désactivé pour la chaîne :", channelName);
-        return;
-    }
-
+    if ( /(^|\.)twitch\.tv$/.test(document.location.hostname) === false | url.includes("https://www.twitch.tv/kuru_zink") ||
+  url.includes("https://www.twitch.tv/pandorelol") { return; }
     var ourTwitchAdSolutionsVersion = 2;// Only bump this when there's a breaking change to Twitch, the script, or there's a conflict with an unmaintained extension which uses this script
     if (window.twitchAdSolutionsVersion && window.twitchAdSolutionsVersion >= ourTwitchAdSolutionsVersion) {
         console.log("skipping video-swap-new as there's another script active. ourVersion:" + ourTwitchAdSolutionsVersion + " activeVersion:" + window.twitchAdSolutionsVersion);
